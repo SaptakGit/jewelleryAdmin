@@ -12,7 +12,7 @@ const ProductListPagination = ({allProductCount, productLimit, getAllProductList
             <th className='text-center' colSpan={16}>
                 <div className="join">
                   {totalPagesArray.map((page,index) =>{
-                      return <input className="join-item btn btn-square" type="radio" name="options" aria-label={page} key={page} onClick={() => {setCurrPage(page); paginateClick(page)}} />
+                      return <input className="join-item btn btn-square btn-disabled" type="radio" name="options" aria-label={page} key={page} onClick={() => {setCurrPage(page); paginateClick(page)}} />
                   })}
                 </div>
             </th> 

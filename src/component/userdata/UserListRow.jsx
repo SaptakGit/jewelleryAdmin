@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import api from '../../utlis/api';
 import { BEARER_TOKEN, CLIENT_AVATAR, CLIENT_AVATAR_FEMALE, CLIENT_AVATAR_MALE} from '../../utlis/consttant'
+import { Link } from 'react-router-dom';
 
 const UserListRow = ({userinfo, currPage, userListFnc, indexPoint}) => {
 
@@ -84,8 +85,11 @@ const UserListRow = ({userinfo, currPage, userListFnc, indexPoint}) => {
                   <div className="dropdown dropdown-left">
                     <div tabIndex={0} role="button" className="m-1 btn btn-info">Action</div>
                     <ul tabIndex={0} className="p-2 shadow-sm dropdown-content menu bg-base-100 rounded-box z-1 w-52">
+                      <li>
+                        <Link to={`/admin/user/${id}`} state={{id, name, phone, address, email, photo, age, gender, status, userPhoto}} className="text-orange-500"> 👁️ View</Link>
+                      </li>
                       <li><a className="text-orange-500"> ✒️ Edit</a></li>
-                      <li><button className="text-red-600" onClick={() => deleteProduct(_id)}> 🗑️ Delete</button></li>
+                      <li><button className="text-red-600" onClick={() => deleteProduct(id)}> 🗑️ Delete</button></li>
                     </ul>
                   </div>
                 </td>

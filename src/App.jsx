@@ -7,6 +7,7 @@ import Dashboard from './component/Dashboard'
 import Category from './component/category/Category'
 import Product from './component/product/Product'
 import Userlist from './component/userdata/userlist'
+import UserProfile from './component/userdata/UserProfile'
 
 function App() {
   
@@ -22,7 +23,8 @@ function App() {
         { path: '/dashboard', element: <CheckAuth><Dashboard/></CheckAuth>},
         { path: '/category', element:<CheckAuth><Category/></CheckAuth>},
         { path: '/product', element:<CheckAuth><Product/></CheckAuth>},
-        { path: '/userlist', element:<CheckAuth><Userlist/></CheckAuth>}
+        { path: '/userlist', element:<CheckAuth><Userlist/></CheckAuth>},
+        { path: '/admin/user/:id', element:<CheckAuth><UserProfile/></CheckAuth>}
          /*{ path: '/dashboard', element: <Dashboard/>},
         { path: '/category', element:<Category/>},
         { path: '/product', element:<Product/>}*/
